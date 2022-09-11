@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&display=swap');
+
+/* SETEANDO ESTILOS */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+:root {
+    --main-yellow: #f7df1e;
+    --main-white: #F7F4EA;
+    --main-black: #000004;
+    --main-blue: #0a65b9;
+    --second-blue: #2E8CE3;
+    --alert: #E01526;
+    --alert-hover: #b6212d;
+}
+
+a{
+    text-decoration: none;
+    color: var(--main-black);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0 0 0 0;
+    font-size: 3rem;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+body{
+    height: 100vh;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.5rem;
+    background-color: #e9e6e6;
+}
+
+/* Utilidades */
+
+.text-center{
+    text-align: center;
+}
+
+.font-size-16{
+    font-size: 1.6rem;
+}
+
+.color-blue{
+    color: var(--main-blue);
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.mb-5{
+    margin-bottom: 1.25rem;
+}
+
+.mt-1{
+    margin-top: 2.25rem;
+}
+.mt-5{
+    margin-top: 5rem;
+}
+
+.mt-3{
+    margin-top: 1.25rem;
+}
+
+.padding-box{
+    padding: 6.5rem 6.5rem 0 6.5rem;
+}
+
+.padding-box-modified{
+    padding: 0 6.5rem 6.5rem 6.5rem;
+}
+
+.btn{
+    text-align: center;
+    display: inline-block;
+    padding: 1.25rem 2.25rem !important;
+    color: var(--main-white);
+    background-color: var(--second-blue);
+    border: 1px solid var(--second-blue);
+    width: 100%;
+    transition: all 100ms ease-in;
+}
+
+.btn-delete{
+    text-align: center;
+    display: inline-block;
+    padding: 1.25rem 2.25rem;
+    color: var(--main-white);
+    background-color: var(--alert);
+    border: 1px solid var(--alert);
+    width: 100%;
+    transition: all 100ms ease-in;
+}
+
+.btn-delete:hover{
+    background-color: var(--alert-hover);
+    border: 1px solid var(--alert-hover);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--main-blue);
+    border: 1px solid var(--main-blue);
+    cursor: pointer;
+}
+
+.block{
+    display: block;
+}
+
+.overflow-scroll-y{
+    overflow-y: scroll;
+}
+
+/* HEADER */
+
+header{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 4rem;
+    background-color: var(--main-yellow);
+}
+
+.section{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+/* REGISTRAR TAREA */
+.register-todo{
+    border-radius: .8rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: var(--main-white);
+    padding: 6.5rem;
+    width: 45%;
+    margin-right: 3.25rem;
+    margin-left: 3.25rem;
+}
+
+.error{
+    padding: .2rem;
+    background-color: var(--alert);
+    color: var(--main-white);
+    display: none;
+}
+
+.register-todo input, select, textarea{
+    width: 100%;
+    padding: .5rem;
+}
+
+textarea{
+    resize: vertical;
+    height: 16.5rem;
+}
+
+/* LISTA */
+.lista{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: var(--main-white);
+    width: 55%;
+    border-radius: .8rem;
+}
+
+.check{
+    display: flex;
+    gap: 2rem;
+}
+
+.actions{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* CARD */
+.card{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    width: 100%;
+    padding: 3.25rem;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-radius: .8rem;
+}
+
+.card:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card p{
+    margin: .5rem 0;
+}
+
+
+.cards-container{
+    height: 50vh;
+}

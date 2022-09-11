@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>TodoList</title>
+  </head>
+  <body>
+    <header>
+      <h1
+        class="text-center vertical-center animate__animated animate__bounceInLeft"
+      >
+        TODO list with javascript vanilla! 📘
+      </h1>
+    </header>
+
+    <!-- APP UI -->
+    <div class="section container mt-5">
+      <div class="register-todo animate__animated animate__fadeIn">
+        <h2 class="text-center">¡Registra tus tareas aquí!</h2>
+        <p class="text-center">
+          Registra todas tus tareas,
+          <span class="bold color-blue"> fácil con este formulario </span> ✅
+        </p>
+        <div class="error" id="errorMessage">
+          <p class="text-center">¡Todos los campos son obligatorios! 😤</p>
+        </div>
+        <form action="" id="form" class="mt-5">
+          <div class="mb-5">
+            <label class="block bold mb-5" for="title"
+              >Nombre de la tarea o pendiente</label
+            >
+            <input
+              type="text"
+              id="title"
+              placeholder="Debo resolver mi tarea de matemáticas 💪"
+            />
+          </div>
+
+          <div class="mb-5">
+            <label class="block bold mb-5" for="priority"
+              >Nivel de prioridad</label
+            >
+            <select name="" id="priority">
+              <option value="" hidden>Selecciona la prioridad</option>
+              <option value="low">🟩 Baja</option>
+              <option value="medium">🟨 Media</option>
+              <option value="high">🟥 Alta</option>
+            </select>
+          </div>
+
+          <div class="mb-5">
+            <label class="block bold mb-5" for="description"
+              >Descripcion de la tarea (300 caracteres max)</label
+            >
+            <textarea
+              name=""
+              id="description"
+             
+              maxlength="300"
+            >
+            </textarea>
+          </div>
+          <input type="submit" class="btn" value="Registrar tarea" />
+        </form>
+      </div>
+
+      <div class="lista animate__animated animate__fadeIn">
+        <div class="padding-box">
+          <h2 class="text-center">¡Mira tus tareas aqui!</h2>
+          <p class="text-center">
+            Ten un control de todos tus penidentes
+            <span class="bold color-blue">
+              Márcalos con un ✅ si ya los completaste o edítalos
+            </span>
+          </p>
+        </div>
+
+        <div class="cards-container padding-box-modified overflow-scroll-y">
+          <div id="output"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
